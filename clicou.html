@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <div id="area" onmouseover="entrar()" onmouseout="sair()" onclick="clicar()">
+        clique em mim
+    </div>
+
+
+
+    <script>
+        var a = document.getElementById('area')
+            // a.addEventListener('click', clicar)
+            // a.addEventListener('mouseover', entrar)
+            // a.addEventListener('mouseout', sair)
+
+        function clicar() {
+
+            a.innerText = 'Clicou!'
+
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+
+        }
+    </script>
+
+
+</body>
+
+</html>

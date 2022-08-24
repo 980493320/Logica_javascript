@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<label for="tempo">Selecione o tipo de clima hoje: </label>
+<select id="tempo">
+  <option value="">--Faça uma escolha--</option>
+  <option value="Ensolarado">Ensolarado</option>
+  <option value="Chuvoso">Chuvoso</option>
+  <option value="Nevando">Nevando</option>
+  <option value="Nublado">Nublado</option>
+  <option value="Quente">Quente</option>
+</select>
+
+<p></p>
+
+
+
+<script>
+    var select = document.querySelector('select');
+    var para = document.querySelector('p');
+
+    select.addEventListener('click', DefinirTempo);
+
+    function DefinirTempo() {
+        var escolha = select.value;
+
+        if (escolha === 'Ensolarado') {
+            para.textContent = 'Está bom e ensolarado lá fora hoje. Use shorts! Vá à praia, ou ao parque, e tome um sorvete..';
+        } else if (escolha === 'Chuvoso') {
+            para.textContent = 'A chuva está caindo lá fora; leve uma capa de chuva e um guarda-chuva, e não fique muito tempo fora.';
+        } else if (escolha === 'Nevando') {
+            para.textContent = 'A neve está caindo - está congelando! Melhor ficar com uma xícara de chocolate quente ou construir um boneco de neve.';
+        } else if (escolha === 'Nublado') {
+            para.textContent = 'Não está chovendo, mas o céu está cinza e sombrio; pode virar a qualquer minuto, então leve uma capa de chuva para o caso.';
+        } else if (escolha === 'Quente') {
+            para.textContent = 'O dia em belém está sempre quente, vai ser quente assim lá na China.';
+        } else {
+            para.textContent = '';
+        }
+    }
+</script>
